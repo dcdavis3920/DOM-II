@@ -39,17 +39,17 @@ focusOn.addEventListener('contextmenu', (event) => {
 })
 let focusOn1 = document.querySelector('.intro');
 focusOn1.addEventListener('contextmenu', (event) => {
-  focusOn1.style.color= "orange";
+  focusOn1.style.color= "purple";
 })
 
 let focusOn2 = document.querySelector('.home');
 focusOn2.addEventListener('contextmenu', (event) => {
-  focusOn2.style.color= "orange";
+  focusOn2.style.color= "yellow";
 }) 
 
 let mouseOut = document.querySelector('.nav-link');
 mouseOut.addEventListener('mouseout', (event) => {
-  mouseDown.style.backgroundColor= "yellow";
+  mouseDown.style.backgroundColor= "black";
 })
 
 const wheel2 = document.querySelector("body");
