@@ -4,17 +4,18 @@
 //   alert('You Clicked the Sample Button!')
 // })
 
-const Body = document.querySelector("body");
-Body.addEventListener("keydown", (event) => {
+const Body = document.querySelector("a:nth-of-type(3)");
+Body.addEventListener("dblclick", (event) => {
     alert("What, do you want")
 })
 
 let mouseDown = document.querySelector('.nav-link');
-mouseDown.addEventListener('mousedown', (event) => {
+mouseDown.addEventListener('click', (event) => {
   mouseDown.style.backgroundColor= "red";
+  event.preventDefault();
 })
 
-let mouseOver = document.querySelector('p');
+let mouseOver = document.querySelector('p:nth-of-type(2)');
 mouseOver.addEventListener('mouseover', (event) => {
   mouseOver.style.backgroundColor= "green";
 })
@@ -32,9 +33,19 @@ variable2.addEventListener('drag', (event) => {
 })
 
 let focusOn = document.querySelector('p');
-focusOn.addEventListener('mouseover', (event) => {
+focusOn.addEventListener('contextmenu', (event) => {
   focusOn.style.color= "orange";
+  event.stopPropagation();
 })
+let focusOn1 = document.querySelector('.intro');
+focusOn1.addEventListener('contextmenu', (event) => {
+  focusOn1.style.color= "orange";
+})
+
+let focusOn2 = document.querySelector('.home');
+focusOn2.addEventListener('contextmenu', (event) => {
+  focusOn2.style.color= "orange";
+}) 
 
 let mouseOut = document.querySelector('.nav-link');
 mouseOut.addEventListener('mouseout', (event) => {
@@ -42,7 +53,7 @@ mouseOut.addEventListener('mouseout', (event) => {
 })
 
 const wheel2 = document.querySelector("body");
-wheel2.addEventListener("wheel", (event) => {
+wheel2.addEventListener("buttonDown", (event) => {
     alert("What, are you looking for")
 })
 
